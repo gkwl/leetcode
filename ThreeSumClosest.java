@@ -11,20 +11,17 @@ public class ThreeSumClosest {
             int k = num.length - 1;
             while (j < k) {
                 int sum = num[i] + num[j] + num[k];
-                if (sum == target) {
+                if (sum == target)
                     return sum;
-                }
 
                 int minus = sum - target;
-                if (Math.abs(minus) < Math.abs(ans - target)) {
+                if (Math.abs(minus) < Math.abs(ans - target))
                     ans = sum;
-                }
 
-                if (minus < 0) {
+                if (minus < 0)
                     j++;
-                } else {
+                else
                     k--;
-                }
             }
         }
         return ans;
